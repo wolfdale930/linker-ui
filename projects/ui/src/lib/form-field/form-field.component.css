@@ -1,0 +1,14 @@
+.lui-form-field {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border: 2px solid #28282880;
+  border-radius: 8px;
+}
+.lui-form-field > * > input {
+  padding: 25px !important;
+}
+
+.lui-form-field:hover {
+  border: 2px solid #282828;
+}

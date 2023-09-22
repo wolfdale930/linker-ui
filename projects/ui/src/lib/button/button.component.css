@@ -1,99 +1,69 @@
 .primary {
-    background: #515993;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    display: inherit;
-    width: inherit;
+  background: #515993;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  display: inherit;
+  width: inherit;
 }
 
 .primary:hover {
-    background: #454b7c;
+  background: #454b7c;
 }
 
 .primary:focus {
-    background: #454b7c;
+  background: #454b7c;
 }
 
 .primary:active {
-    background: #393e66;
+  background: #393e66;
 }
 
-
 .secondary {
-    background: #53a77d;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    display: inherit;
-    width: inherit;
+  background: #53a77d;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  display: inherit;
+  width: inherit;
 }
 
 .secondary:hover {
-    background: #478f6b;
+  background: #478f6b;
 }
 
 .secondary:focus {
-    background: #478f6b;
+  background: #478f6b;
 }
 
 .secondary:active {
-    background: #3e7c5d;
-}
-
-.loader,
-.loader:before,
-.loader:after {
-  border-radius: 50%;
-  width: 2.5em;
-  height: 2.5em;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation: load7 1.8s infinite ease-in-out;
-  animation: load7 1.8s infinite ease-in-out;
+  background: #3e7c5d;
 }
 
 .loader {
-    width: 8px;
-    height: 40px;
-    border-radius: 4px;
-    display: block;
-    margin: 20px;
-    position: relative;
-    background: currentColor;
-    color: #FFF;
-    box-sizing: border-box;
-    animation: animloader 0.3s 0.3s linear infinite alternate;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .loader::after, .loader::before {
-    content: '';
-    width: 8px;
-    height: 40px;
-    border-radius: 4px;
-    background: currentColor;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 20px;
-    box-sizing: border-box;
-    animation: animloader 0.3s  0.45s  linear infinite alternate;
+  100% {
+    transform: rotate(360deg);
   }
-  .loader::before {
-    left: -20px;
-    animation-delay: 0s;
-  }
-  
-  @keyframes animloader {
-    0%   { height: 40px} 
-    100% { height: 1px}
-  }
-  
+}

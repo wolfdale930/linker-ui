@@ -1,3 +1,4 @@
 <button class="{{ type }}">
+    <span class="loader" *ngIf="loading"></span>
     <ng-content *ngIf="!loading"></ng-content>
 </button>
