@@ -8,3 +8,5 @@ export * from './lib/form-field/form-field.component';
 export * from './lib/form-field/form-field.module';
 export * from './lib/input/input.component';
 export * from './lib/input/input.module';
+export * from './lib/popup/popup.module';
+export * from './lib/popup/popup.service';

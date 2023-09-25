@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lib:build": "ng build ui --configuration development",
-    "lib:watch": "ng build ui --watch --configuration development"
+    "lib:watch": "ng build ui --watch --configuration development",
+    "lib:pack": "cd dist/ui && npm pack --pack-destination=../../"
   },
   "private": true,
   "dependencies": {

@@ -1,5 +1,5 @@
 .primary {
-  background: #515993;
+  background: #e4a644;
   border: none;
   padding: 8px 16px;
   border-radius: 8px;
@@ -12,19 +12,19 @@
 }
 
 .primary:hover {
-  background: #454b7c;
+  background: #ca943c;
 }
 
 .primary:focus {
-  background: #454b7c;
+  background: #ca943c;
 }
 
 .primary:active {
-  background: #393e66;
+  background: #aa7c33;
 }
 
 .secondary {
-  background: #53a77d;
+  background: #643426;
   border: none;
   padding: 8px 16px;
   border-radius: 8px;
@@ -37,15 +37,15 @@
 }
 
 .secondary:hover {
-  background: #478f6b;
+  background: #4e291e;
 }
 
 .secondary:focus {
-  background: #478f6b;
+  background: #4e291e;
 }
 
 .secondary:active {
-  background: #3e7c5d;
+  background: #412219;
 }
 
 .loader {

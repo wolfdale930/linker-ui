@@ -4,20 +4,20 @@
   margin: inherit;
   width: inherit;
   height: inherit;
-  border: 2px solid #28282880;
+  border: 2px solid #7e7e7e96;
   border-radius: 8px;
   padding: 8px;
   background: transparent;
 }
 
 .lui-input:hover {
-  border: 2px solid #282828;
+  border: 2px solid #e4a644;
 }
 .lui-input:focus {
-  border: 2px solid #282828;
+  border: 2px solid #e4a644;
 }
 
 .lui-input:focus-within {
-  border: 2px solid #282828;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.425);
+  border: 2px solid #e4a644;
+  box-shadow: 0px 0px 5px #e4a7448c;
 }
