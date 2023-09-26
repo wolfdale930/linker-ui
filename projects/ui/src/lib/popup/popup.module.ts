@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PopupComponent } from '../popup/popup.component';
 import { ToastComponent } from './toast/toast.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { ButtonModule } from '../button/button.module';
 
 
 
@@ -13,7 +14,8 @@ import { DialogComponent } from './dialog/dialog.component';
     DialogComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ButtonModule
   ],
 })
 export class PopupModule { }

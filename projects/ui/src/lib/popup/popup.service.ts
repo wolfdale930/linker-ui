@@ -2,6 +2,9 @@ import { Injectable, ViewContainerRef } from '@angular/core';
 import { PopupComponent } from './popup.component';
 import { ToastComponent } from './toast/toast.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { Toast } from './toast.class';
+import { Dialog } from './dialog.class';
+import { PopupConfig } from './popup.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -15,27 +18,16 @@ export class PopupService {
     this.rootViewContainer = viewContainerRef
   }
 
-  createToast(config: PopupConfig) {
-    const componentRef = this.rootViewContainer?.createComponent(ToastComponent);
-    if (componentRef) {
-      componentRef.instance.title = config.title;
-      componentRef.instance.content = config.content;
-    }
-    return componentRef;
+  getToast(config: PopupConfig) {
+    if (!this.rootViewContainer)
+      throw new Error('View Container not initialized');
+    return new Toast(this.rootViewContainer, config);
   }
 
-  createDialog(config: PopupConfig) {
-    const componentRef = this.rootViewContainer?.createComponent(DialogComponent);
-    if (componentRef) {
-      componentRef.instance.title = config.title;
-      componentRef.instance.content = config.content;
-    }
-    return componentRef;
+  getDialog(config: PopupConfig) {
+    if (!this.rootViewContainer)
+      throw new Error('View Container not initialized');
+    return new Dialog(this.rootViewContainer, config);
   }
 
-}
-
-export interface PopupConfig {
-  title: string;
-  content: string;
 }
