@@ -6,9 +6,11 @@ export class Toast implements Popup {
     viewContainerRef: ViewContainerRef
     ref: ComponentRef<ToastComponent> | undefined;
     config: PopupConfig;
-    constructor(_viewContainerRef: ViewContainerRef, _config: PopupConfig) {
+    timeoutInMs: number;
+    constructor(_viewContainerRef: ViewContainerRef, _config: PopupConfig, _timeoutInMs?: number) {
         this.viewContainerRef = _viewContainerRef;
         this.config = _config;
+        this.timeoutInMs = _timeoutInMs || 5000;
     }
 
     open() {
@@ -16,6 +18,11 @@ export class Toast implements Popup {
         if (this.ref) {
             this.ref.instance.title = this.config.title;
             this.ref.instance.content = this.config.content;
+        }
+        if (this.timeoutInMs > 0) {
+            setTimeout(() => {
+                this.ref?.destroy();
+            }, this.timeoutInMs);
         }
     }
 

@@ -21,8 +21,10 @@ export class AppComponent {
       this.toast = this.popupService.getToast({ title: 'Toast', content: 'Content' });
       this.toast.open();
     }
-    else
+    else {
       this.toast.close();
+      this.toast = undefined;
+    }
   }
 
   toggleDialog() {
