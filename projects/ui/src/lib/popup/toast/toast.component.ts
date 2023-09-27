@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'lui-toast',
@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class ToastComponent {
   title: string = '';
   content: string = ''
+  @Output() toastClick = new EventEmitter<void>();
+
+  toastClicked() {
+    this.toastClick.emit();
+  }
+
 }

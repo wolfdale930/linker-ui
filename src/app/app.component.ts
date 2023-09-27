@@ -17,7 +17,7 @@ export class AppComponent {
   }
 
   toggleToast() {
-    if (!this.toast) {
+    if (!this.toast || this.toast?.closed) {
       this.toast = this.popupService.getToast({ title: 'Toast', content: 'Content' });
       this.toast.open();
     }
