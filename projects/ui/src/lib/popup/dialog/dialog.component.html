@@ -5,7 +5,8 @@
             {{ content }}
         </div>
         <div class="footer">
-            <lui-button>Ok</lui-button>
+            <lui-button *ngFor="let button of buttons" (click)="button.onClickFn($event)" [type]="button.type">{{
+                button.text }}</lui-button>
         </div>
     </div>
 </div>

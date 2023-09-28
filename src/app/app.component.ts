@@ -28,12 +28,24 @@ export class AppComponent {
   }
 
   toggleDialog() {
-    if (!this.dialog) {
-      this.dialog = this.popupService.getDialog({ title: 'Dialog', content: 'Content' });
+    if (!this.dialog || this.dialog?.closed) {
+      this.dialog = this.popupService.getDialog({
+        title: 'Dialog', content: 'Content', buttonsConfig: [
+          {
+            text: 'Cancel',
+            type: 'secondary',
+            onClickFn: this.logOkClick.bind(this)
+          }
+        ]
+      });
       this.dialog.open();
     }
     else
       this.dialog.close();
+  }
+
+  logOkClick(event: any) {
+    console.log(event);
   }
 
 
