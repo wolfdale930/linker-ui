@@ -30,7 +30,7 @@ export class AppComponent {
   toggleDialog() {
     if (!this.dialog || this.dialog?.closed) {
       this.dialog = this.popupService.getDialog({
-        title: 'Dialog', content: 'Content', buttonsConfig: [
+        title: 'Dialog', content: 'Content', allowBackdropClose: false, buttonsConfig: [
           {
             text: 'Cancel',
             type: 'secondary',

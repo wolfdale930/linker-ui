@@ -28,6 +28,8 @@ export class Dialog implements Popup {
                 ];
             }
             this.ref.instance.buttons = this.config.buttonsConfig;
+            if (this.config.allowBackdropClose === undefined || this.config.allowBackdropClose === true)
+                this.ref.instance.backdropClose.subscribe(() => this.close());
         }
     }
 
@@ -39,6 +41,7 @@ export class Dialog implements Popup {
 
 export interface DialogConfig extends PopupConfig {
     buttonsConfig?: ButtonConfig[];
+    allowBackdropClose?: boolean;
 }
 
 export interface ButtonConfig {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { ButtonConfig } from '../dialog.class';
 
 @Component({
@@ -10,4 +10,5 @@ export class DialogComponent {
   title: string = '';
   content: string = ''
   buttons!: ButtonConfig[];
+  backdropClose = new EventEmitter();
 }

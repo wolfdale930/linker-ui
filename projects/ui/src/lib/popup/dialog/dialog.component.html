@@ -1,5 +1,5 @@
-<div class="dialog-bg">
-    <div class="dialog">
+<div class="dialog-bg" (click)="backdropClose.emit()">
+    <div class="dialog" (click)="$event.stopPropagation()">
         <h1>{{ title }}</h1>
         <div class="content">
             {{ content }}
