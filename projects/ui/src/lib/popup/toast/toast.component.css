@@ -11,24 +11,29 @@
 }
 
 .toast {
-  background: #aa7c33;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: white;
   margin: auto;
-  margin-top: 200px;
+  margin-top: 50px;
   padding: 12px;
+  max-width: fit-content;
+  max-height: fit-content;
   border-radius: 8px;
-  color: white;
-  box-shadow: 0 0 10px #e4a64475;
+  box-shadow: 0 0 10px #2828282e;
   animation: showup 500ms ease-in-out forwards;
-  z-index: 101;
 }
 
 @keyframes showup {
   0% {
     opacity: 0;
-    margin-top: 180px;
+    margin-top: 30px;
   }
   100% {
     opacity: 1;
-    margin-top: 200px;
+    margin-top: 50px;
   }
 }
